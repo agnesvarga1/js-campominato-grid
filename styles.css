@@ -8,6 +8,43 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.play-btn {
+  padding: 5px 8px;
+  background-color: transparent;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+  cursor: pointer;
+}
 main {
   background-color: #7fffd4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+#grid,
+.cell {
+  border: 1px solid black;
+}
+#grid {
+  width: 40%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  width: calc(100% / 10);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
