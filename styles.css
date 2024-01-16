@@ -47,4 +47,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(4, 123, 16);
 }
