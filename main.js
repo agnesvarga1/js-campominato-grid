@@ -1,10 +1,13 @@
 const gridHtml = document.querySelector("#grid");
 const playBtn = document.querySelector(".play-btn");
-let cellPerLine = 10;
+const selectHtml = document.querySelector("#diff-level");
 
-function startGame() {
+function startGame(n) {
+  let cellPerLine = n;
   for (let i = 1; i <= cellPerLine ** 2; i++) {
     let cellHtml = document.createElement("div");
+    const wCalced = `calc(100% / ${cellPerLine})`;
+    cellHtml.style.setProperty("width", wCalced);
     cellHtml.classList.add("cell");
     cellHtml.innerHTML = `<span>${i}</span>`;
 
@@ -18,5 +21,6 @@ function startGame() {
 }
 
 playBtn.addEventListener("click", () => {
-  startGame();
+  let diffLevel = selectHtml.value;
+  startGame(diffLevel);
 });
