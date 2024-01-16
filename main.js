@@ -1,5 +1,7 @@
+const mainHtml = document.querySelector("main");
 const gridHtml = document.querySelector("#grid");
 const playBtn = document.querySelector(".play-btn");
+const rstBtn = document.querySelector(".rst-btn");
 const selectHtml = document.querySelector("#diff-level");
 
 function startGame(n) {
@@ -22,5 +24,12 @@ function startGame(n) {
 
 playBtn.addEventListener("click", () => {
   let diffLevel = selectHtml.value;
+  mainHtml.classList.remove("noshow");
+  playBtn.classList.add("noshow");
+  rstBtn.classList.remove("noshow");
   startGame(diffLevel);
+});
+
+rstBtn.addEventListener("click", () => {
+  location.reload();
 });

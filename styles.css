@@ -16,7 +16,8 @@ header {
 option {
   padding: 5px 8px;
 }
-.play-btn {
+.play-btn,
+.rst-btn {
   padding: 5px 8px;
   background-color: transparent;
   border: 2px solid darkgray;
@@ -53,4 +54,12 @@ main {
 
 .active {
   background-color: rgb(4, 123, 16);
+}
+
+.show {
+  display: block;
+}
+
+.noshow {
+  display: none;
 }
